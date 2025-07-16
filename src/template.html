@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Todo List</title>
+    </head>
+    <body>
+        <header>
+            <h1>My Todo List</h1>
+        </header>
+
+        <div class="main-wrapper">
+            <nav>
+                <h3>Projects</h3>
+                <ul>
+                    <li>
+                        <a href="#" id="inbox-link" class="active">Inbox</a>
+                    </li>
+                </ul>
+                <button id="add-project-btn">+ Add Project</button>
+            </nav>
+
+            <main>
+                <div class="todo-section-header">
+                    <h2 id="current-project-title">Inbox</h2>
+                    <button id="add-todo-btn">+ Add Todo</button>
+                </div>
+
+                <div id="todos-container">
+                    <div class="todo-item">
+                        <div class="todo-item-content">
+                            <h3>Market Alışverişi</h3>
+                            <p>Süt, ekmek, yumurta al.</p>
+                        </div>
+                        <div class="todo-actions">
+                            <input type="checkbox" />
+                            <button class="edit-todo-btn">✏️</button>
+                            <button class="delete-todo-btn">🗑️</button>
+                        </div>
+                    </div>
+
+                    <div class="todo-item completed">
+                        <div class="todo-item-content">
+                            <h3>Raporu Tamamla</h3>
+                            <p>Son kontrolleri yap ve gönder.</p>
+                        </div>
+                        <div class="todo-actions">
+                            <input type="checkbox" checked />
+                            <button class="edit-todo-btn">✏️</button>
+                            <button class="delete-todo-btn">🗑️</button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+        
+    </body>
 </html>
