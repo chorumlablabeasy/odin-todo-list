@@ -11,6 +11,14 @@ class Todo {
     todoCompleteToggle() {
         this.completed = !this.completed;
     }
+
+    updateTodo() {
+        this.title = newTitle;
+        this.description = newDescription;
+        this.dueDate = newDueDate;
+        this.priority = newPriority;
+    }
+
 }
 
 export { Todo }

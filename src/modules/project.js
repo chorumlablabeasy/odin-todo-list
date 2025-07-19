@@ -1,6 +1,7 @@
 class Project {
     constructor(title) {
         this.id = Date.now().toString();
+        this.isDeletable = true;
         this.title = title;
         this.todos = [];
     }
@@ -9,8 +10,8 @@ class Project {
         this.todos.push(todo);
     }
 
-    removeTodo(todoId) {
-        this.todos = this.todos.filter(todo => todo.id !== todoId)
+    deleteTodo(todoId) {
+        this.todos = this.todos.filter(todo => todo.id !== todoId);
     }
 }
 
