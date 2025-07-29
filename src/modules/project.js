@@ -1,7 +1,7 @@
 class Project {
-    constructor(title) {
+    constructor(title, isDeletable = true) {
         this.id = Date.now().toString();
-        this.isDeletable = true;
+        this.isDeletable = isDeletable;
         this.title = title;
         this.todos = [];
     }
@@ -11,7 +11,14 @@ class Project {
     }
 
     deleteTodo(todoId) {
-        this.todos = this.todos.filter(todo => todo.id !== todoId);
+        const index = this.todos.findIndex(todo => todo.id === todoId);
+        if (index !== -1) {
+            this.todos.splice(index, 1);
+        }
+    }
+
+    getTodos() {
+        return [...this.todos];
     }
 }
 

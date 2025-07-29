@@ -7,18 +7,6 @@ class Todo {
         this.priority = priority;
         this.completed = false;
     }
-
-    todoCompleteToggle() {
-        this.completed = !this.completed;
-    }
-
-    updateTodo() {
-        this.title = newTitle;
-        this.description = newDescription;
-        this.dueDate = newDueDate;
-        this.priority = newPriority;
-    }
-
 }
 
 export { Todo }

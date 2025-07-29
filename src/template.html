@@ -13,9 +13,14 @@
         <div class="main-wrapper">
             <nav>
                 <h3>Projects</h3>
-                <ul>
-                    <li>
-                        <a href="#" id="inbox-link" class="active">Inbox</a>
+                <ul id="projects-list">
+                    <li class="project-item">
+                        <a href="#" id="inbox-link" class="active project-link">Inbox</a>
+                    </li>
+
+                    <li class="project-item" data-project-id="benzersiz-proje-id-123">
+                        <a href="#" class="project-link">Yeni Projem</a>
+                        <button class="delete-project-btn">&times;</button>
                     </li>
                 </ul>
                 <button id="add-project-btn">+ Add Project</button>
@@ -28,6 +33,7 @@
                 </div>
 
                 <div id="todos-container">
+
                     <div class="todo-item">
                         <div class="todo-item-content">
                             <h3>Market Alışverişi</h3>
@@ -53,6 +59,7 @@
                             <button class="delete-todo-btn">🗑️</button>
                         </div>
                     </div>
+                    
                 </div>
             </main>
         </div>
@@ -63,7 +70,7 @@
                 <form id="add-project-form">
                     <div class="form-group">
                         <label for="project-title">Project Title:</label>
-                        <input type="text" id="project-title" required />
+                        <input type="text" id="project-title" required autocomplete="off"/>
                     </div>
                     <div class="modal-actions">
                         <button type="submit" class="primary-btn">
@@ -77,11 +84,11 @@
 
         <dialog id="add-todo-dialog" class="modal-dialog">
             <div class="modal-content">
-                <h2 class="modal-title">Add New Todo</h2>
+                <h2 class="modal-title" id="add-todo-form-title">Add New Todo</h2>
                 <form id="add-todo-form">
                     <div class="form-group">
                         <label for="todo-title">Title:</label>
-                        <input type="text" id="todo-title" required />
+                        <input type="text" id="todo-title" required autocomplete="off"/>
                     </div>
                     <div class="form-group">
                         <label for="todo-description">Description:</label>
@@ -100,7 +107,7 @@
                         </select>
                     </div>
                     <div class="modal-actions">
-                        <button type="submit" class="primary-btn">
+                        <button type="submit" class="primary-btn" id="todo-form-submit-btn">
                             Add Todo
                         </button>
                         <button type="button" id="add-todo-cancel-btn" class="cancel-btn">Cancel</button>
